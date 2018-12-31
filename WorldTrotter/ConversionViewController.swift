@@ -77,4 +77,15 @@ class ConversionViewController : UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         updateCelsiusLabel()
     }
+    
+    /* dark mode silver challenge */
+    override func viewDidAppear(_ animated: Bool) {
+        let date = Date()
+        let hour = Calendar.current.component(.hour, from: date)
+        
+        if hour > 17 || hour < 6 {
+            self.view.backgroundColor=UIColor.darkGray
+        }
+        
+    }
 }
