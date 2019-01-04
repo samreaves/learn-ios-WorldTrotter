@@ -8,15 +8,21 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class MapViewController : UIViewController {
     
     var mapView: MKMapView!
+    var locationManager: CLLocationManager! = CLLocationManager()
+    let authorizationStatus = CLLocationManager.authorizationStatus()
+    let regionRadius: Double = 1000
+    var showsUsersLocation: Bool = true
     
     override func loadView() {
         mapView = MKMapView()
         view = mapView
         
+        /* Adds the segmented control to the top of the map */
         let segmentedControl = UISegmentedControl(items: ["Standard", "Hybrid", "Satellite"])
         segmentedControl.backgroundColor = UIColor.white.withAlphaComponent(0.5)
         segmentedControl.selectedSegmentIndex = 0
@@ -38,6 +44,10 @@ class MapViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mapView.delegate = self
+        locationManager.delegate = self
+        configureLocationServices()
     }
     
     @objc func mapTypeChanged(_ segControl: UISegmentedControl) {
@@ -56,3 +66,28 @@ class MapViewController : UIViewController {
         }
     }
 }
+
+extension MapViewController: CLLocationManagerDelegate {
+    func configureLocationServices() {
+        if authorizationStatus == .notDetermined || authorizationStatus == .denied {
+            locationManager.requestWhenInUseAuthorization()
+        } else {
+            mapView.showsUserLocation = true
+            centerMapOnUsersLocation()
+        }
+    }
+}
+
+extension MapViewController: MKMapViewDelegate {
+    
+    func centerMapOnUsersLocation() {
+        guard let coordinate = locationManager.location?.coordinate else { return }
+        let coordinateRegion = MKCoordinateRegion(center: coordinate, latitudinalMeters: regionRadius * 2.0, longitudinalMeters: regionRadius * 2.0)
+        mapView.setRegion(coordinateRegion, animated: true)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        centerMapOnUsersLocation()
+    }
+}
+

@@ -12,6 +12,7 @@
 		81373AFC21D99C3C0047338F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81373AFB21D99C3C0047338F /* MapViewController.swift */; };
 		8194062C21DEF94100FD5A42 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8194062B21DEF94100FD5A42 /* WebViewController.swift */; };
 		8194062E21DEFB9B00FD5A42 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8194062D21DEFB9B00FD5A42 /* WebKit.framework */; };
+		8194063021DF062E00FD5A42 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8194062F21DF062E00FD5A42 /* CoreLocation.framework */; };
 		FD2E000221D6907500834B21 /* WorldTrotterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2E000121D6907500834B21 /* WorldTrotterTests.swift */; };
 		FD2E000D21D6907500834B21 /* WorldTrotterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2E000C21D6907500834B21 /* WorldTrotterUITests.swift */; };
 		FD2EFFED21D6907500834B21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2EFFEC21D6907500834B21 /* AppDelegate.swift */; };
@@ -43,6 +44,7 @@
 		81373AFB21D99C3C0047338F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8194062B21DEF94100FD5A42 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		8194062D21DEFB9B00FD5A42 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		8194062F21DF062E00FD5A42 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FD2E000121D6907500834B21 /* WorldTrotterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTrotterTests.swift; sourceTree = "<group>"; };
 		FD2E000321D6907500834B21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD2E000821D6907500834B21 /* WorldTrotterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldTrotterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8194063021DF062E00FD5A42 /* CoreLocation.framework in Frameworks */,
 				8194062E21DEFB9B00FD5A42 /* WebKit.framework in Frameworks */,
 				81373AF821D981900047338F /* MapKit.framework in Frameworks */,
 			);
@@ -87,6 +90,7 @@
 		81373AF621D981900047338F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8194062F21DF062E00FD5A42 /* CoreLocation.framework */,
 				8194062D21DEFB9B00FD5A42 /* WebKit.framework */,
 				81373AF721D981900047338F /* MapKit.framework */,
 			);
