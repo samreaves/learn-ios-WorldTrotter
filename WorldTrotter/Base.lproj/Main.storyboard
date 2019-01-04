@@ -10,6 +10,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Web-->
+        <scene sceneID="sGF-vY-qpk">
+            <objects>
+                <viewController id="1nk-vl-roq" customClass="WebViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T0h-dt-Oaj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="UGy-3v-qpb"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Web" id="bHR-Xn-HFt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rM7-iI-JVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1660" y="59.820089955022496"/>
+        </scene>
         <!--Convert-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -95,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xiu-sO-GQP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1682.4000000000001" y="56.221889055472268"/>
+            <point key="canvasLocation" x="825" y="60"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="diJ-tt-Gij">
@@ -110,11 +126,12 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="mMU-IQ-hhg"/>
                         <segue destination="j5l-gc-YNU" kind="relationship" relationship="viewControllers" id="Mhg-Zc-px8"/>
+                        <segue destination="1nk-vl-roq" kind="relationship" relationship="viewControllers" id="9vT-fT-Gfy"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PjO-yW-r8K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="743.20000000000005" y="56.221889055472268"/>
+            <point key="canvasLocation" x="826" y="-708"/>
         </scene>
     </scenes>
     <resources>
