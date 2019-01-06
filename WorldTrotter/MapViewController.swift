@@ -23,7 +23,10 @@ class MapViewController : UIViewController {
         view = mapView
         
         /* Adds the segmented control to the top of the map */
-        let segmentedControl = UISegmentedControl(items: ["Standard", "Hybrid", "Satellite"])
+        let standardString = NSLocalizedString("standardString", comment: "String for Standard Map selection")
+        let hybridString = NSLocalizedString("hybridString", comment: "String for Hybrid Map selection")
+        let satelliteString = NSLocalizedString("satelliteString", comment: "String for Satellite Map selection")
+        let segmentedControl = UISegmentedControl(items: [standardString, hybridString, satelliteString])
         segmentedControl.backgroundColor = UIColor.white.withAlphaComponent(0.5)
         segmentedControl.selectedSegmentIndex = 0
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
